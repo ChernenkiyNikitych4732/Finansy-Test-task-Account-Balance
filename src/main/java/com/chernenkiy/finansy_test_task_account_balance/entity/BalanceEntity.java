@@ -1,9 +1,13 @@
 package com.chernenkiy.finansy_test_task_account_balance.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Setter
+@Getter
 @Entity
 @Table(name = "balance_entities")
 public class BalanceEntity {
@@ -27,52 +31,4 @@ public class BalanceEntity {
 
     @Column(name = "description")
     private String description;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public AccountEntity getAccount() {
-        return account;
-    }
-
-    public void setAccount(AccountEntity account) {
-        this.account = account;
-    }
-
-    public BigDecimal getAmountChange() {
-        return amountChange;
-    }
-
-    public void setAmountChange(BigDecimal amountChange) {
-        this.amountChange = amountChange;
-    }
-
-    public BigDecimal getBalanceAfter() {
-        return balanceAfter;
-    }
-
-    public void setBalanceAfter(BigDecimal balanceAfter) {
-        this.balanceAfter = balanceAfter;
-    }
-
-    public LocalDateTime getChangeDate() {
-        return changeDate;
-    }
-
-    public void setChangeDate(LocalDateTime changeDate) {
-        this.changeDate = changeDate;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

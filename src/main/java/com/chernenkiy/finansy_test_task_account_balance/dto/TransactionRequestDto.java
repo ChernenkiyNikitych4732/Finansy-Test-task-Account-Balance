@@ -1,7 +1,12 @@
 package com.chernenkiy.finansy_test_task_account_balance.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 
+@Setter
+@Getter
 public class TransactionRequestDto {
     private String fromAccountId;
     private String toAccountId;
@@ -10,30 +15,6 @@ public class TransactionRequestDto {
     public TransactionRequestDto(String fromAccountId, String toAccountId, BigDecimal amount) {
         this.fromAccountId = fromAccountId;
         this.toAccountId = toAccountId;
-        this.amount = amount;
-    }
-
-    public String getFromAccountId() {
-        return fromAccountId;
-    }
-
-    public void setFromAccountId(String fromAccountId) {
-        this.fromAccountId = fromAccountId;
-    }
-
-    public String getToAccountId() {
-        return toAccountId;
-    }
-
-    public void setToAccountId(String toAccountId) {
-        this.toAccountId = toAccountId;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 
